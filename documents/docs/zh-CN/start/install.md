@@ -28,6 +28,7 @@ layui.config({
     tableChild: 'soulTable/tableChild',
     tableMerge: 'soulTable/tableMerge',
     tableFilter: 'soulTable/tableFilter',
+    // tableFilter: 'soulTable/sampleFilter', // 简化版的表格过滤
     excel: 'soulTable/excel',
 });
 ```

@@ -139,7 +139,13 @@
     color: #999;
 }
 /*表格筛选*/
+.soul-icon.soul-icon-filter {
+    position: absolute;
+    z-index: 0;
+}
 .soul-table-filter {
+    position: absolute;
+    top: 5px;
     line-height: 20px;
     color: #b2b2b2;
     cursor: pointer;
@@ -164,7 +170,7 @@
     display: none;
 }
 .soul-table-filter[soul-filter="true"] i {
-    color: #009688!important;
+    color: #323232 !important;
 }
 
 
@@ -182,6 +188,60 @@
     box-shadow: 2px 2px 4px -2px rgba(0,0,0,.2);
 }
 [id^=main-list] {
+    max-height: initial;
+}
+
+[id^=soul-filter-sample] {
+    display: inline-block;
+    position: absolute;
+    z-index: 2147483647;
+    background-color: white;
+    max-height: 200px;
+    min-width: 100px;
+    max-width: 300px;
+    overflow-y: auto;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px -2px rgba(0,0,0,.2);
+}
+.searchmob{
+    padding: 8px;
+    flex-wrap: wrap;
+}
+.search-clear-input{
+    color: #cccccc;
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+}
+.searchmob .search-sample-input{
+    position: initial;
+    overflow: hidden;
+    padding: 0 4px;
+    margin-right: 4px;
+}
+.searchmob .search-sample-input input{
+    height: 28px;
+    border: none;
+    box-shadow: none;
+}
+#soul-filter-sample-btn{
+    position: inherit;
+    min-width: auto;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 12px;
+    background-color: #009688;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+[id^=soul-filter-sample] {
     max-height: initial;
 }
 [id^=soul-condition] {
