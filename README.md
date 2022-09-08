@@ -10,11 +10,12 @@
 2. 拖动列调整顺序、隐藏显示列
 3. excel导出（根据筛选条件和列顺序导出）
 4. 子表（表中表、无限层级、子表同样支持前3个功能）
-5.拖动行
-6.右击快捷菜单
-7.合计栏支持固定列
-8.双击自适应列宽
-9.右侧固定列 列宽拖动改到单元格左侧
+5. 拖动行
+6. 右击快捷菜单
+7. 合计栏支持固定列
+8. 双击自适应列宽
+9. 右侧固定列 列宽拖动改到单元格左侧
+### 10. 基于soulTable新增简单筛选功能
 
 ## 效果
 ### 1.表头筛选效果
@@ -29,10 +30,14 @@
 ### 4.子表
 ![子表](img/tableChild.gif)
 
+### 5.简单筛选
+![简单筛选](img/sampleFilter.png)
+
 ## 快速上手
 1.将下面模块放到自己项目中:
 >soulTable.js     总入口  
   tableFilter.js  表头筛选   
+  sampleFilter.js  表头简单筛选  
   excel.js        excel导出    
   tableChild.js   子表 [可单独使用](https://saodiyang.gitee.io/layui-soul-table/#/zh-CN/component/child/alone)   
   tableMerge.js   单元格合并 [可单独使用](https://saodiyang.gitee.io/layui-soul-table/#/zh-CN/component/merge/alone)     
@@ -45,9 +50,17 @@
 // 自定义模块，这里只需要开放soulTable即可
 layui.config({
     base: 'ext/',   // 模块目录
-}).extend({                         
-    soulTable: 'soulTable'  // 模块别名
+}).extend({
+    soulTable: 'soulTable',
+    tableChild: 'tableChild',
+    tableMerge: 'tableMerge',
+    // tableFilter: 'tableFilter',// 使用原来的筛选
+    tableFilter: 'sampleFilter',// 使用简单筛选
+    excel: 'excel',
 });
+// 以上 tableFilter 根据需求二选一
+//  1. tableFilter 为原来的筛选
+//  2. sampleFilter 为简单筛选
 ```
 3.引入 `soulTable.css` 到自己项目中。（在项目根目录可找到）
 
